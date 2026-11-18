@@ -11,7 +11,7 @@ verified build recipe, per-tag patches, and release wheels.
 |---|---|---|
 | v3.3.0 | [release](../../releases) `paddlepaddle_gpu-3.3.0.dev20251226-cp312-cp312-linux_aarch64.whl` | ✅ verified: `run_check()` green on GPU, PP-OCRv6 line OCR on real scans (German, umlauts correct) |
 | v3.3.1 | [release](../../releases) `paddlepaddle_gpu-3.3.0.dev20260319-cp312-cp312-linux_aarch64.whl` | ✅ verified: `run_check()` green on GPU (built via `./build.sh v3.3.1`, unpatched) |
-| v3.4.0 | — | ⚠️ expect FlashAttention compile segfault on GB10 (Paddle#76215); disable via `cmake/third_party.cmake` |
+| v3.4.0 | [release](../../releases) `paddlepaddle_gpu-3.4.0.dev20260909-cp312-cp312-linux_aarch64.whl` | ✅ verified: `run_check()` green on GPU (needs `patches/v3.4.0/disable-flashattn-on-arm.patch` — the WITH_ARM guard was dropped upstream) |
 
 ## Build
 
