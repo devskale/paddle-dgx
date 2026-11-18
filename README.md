@@ -46,9 +46,12 @@ First expected patch: FlashAttention disable for ≥ v3.4.0 (Paddle#76215).
 
 ## Install
 
+Wheels are mirrored on the HF Hub for one-line installs:
+<https://huggingface.co/skaledev/paddle-dgx>
+
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install paddlepaddle_gpu-3.3.0.dev20251226-cp312-cp312-linux_aarch64.whl
+# v3.3.1 (latest)
+pip install https://huggingface.co/skaledev/paddle-dgx/resolve/main/paddlepaddle_gpu-3.3.0.dev20260319-cp312-cp312-linux_aarch64.whl
 pip install paddleocr        # does NOT pull a CPU paddlepaddle
 python -c "import paddle; print(paddle.is_compiled_with_cuda())"  # True
 ```
