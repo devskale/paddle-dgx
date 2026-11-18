@@ -1,0 +1,12 @@
+--- a/cmake/third_party.cmake	2026-11-18 22:12:13.226843758 +0100
++++ b/cmake/third_party.cmake	2026-11-18 22:12:13.234367257 +0100
+@@ -601,7 +601,8 @@
+ 
+ if(WITH_GPU
+    AND NOT WIN32
+-   AND NOT APPLE)
++   AND NOT APPLE
++   AND NOT WITH_ARM)
+   if(${CMAKE_CUDA_COMPILER_VERSION} GREATER_EQUAL 12.3
+      AND ${CMAKE_CUDA_COMPILER_VERSION} LESS_EQUAL 13.0)
+     foreach(arch ${NVCC_ARCH_BIN})
